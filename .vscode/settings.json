@@ -1,0 +1,15 @@
+{
+	"editor.formatOnSave": true,
+	"editor.insertSpaces": false,
+	"editor.wordWrap": "wordWrapColumn",
+	"editor.wordWrapColumn": 120,
+	"diffEditor.renderSideBySide": false,
+	"editor.rulers": [
+		100,
+		120
+	],
+	"eslint.validate": [
+		"javascript",
+		"ejs"
+	]
+}
