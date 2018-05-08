@@ -1,0 +1,29 @@
+{
+	"name": "sid",
+	"version": "1.0.0",
+	"description": "Sistema Integrado DeOrganização",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Repreguica/sid.git"
+	},
+	"keywords": [
+		"telegram"
+	],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Repreguica/sid/issues"
+	},
+	"homepage": "https://github.com/Repreguica/sid#readme",
+	"dependencies": {
+		"telegraf": "^3.21.0"
+	},
+	"devDependencies": {
+		"eslint": "^4.19.1",
+		"js-beautify": "^1.7.5"
+	}
+}
