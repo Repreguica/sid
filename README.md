@@ -2,6 +2,7 @@
 
 ## Install
 * [Node v8 LTS](https://nodejs.org/en/)
+* `npm i`
 
 https://telegraf.js.org/#/
 
