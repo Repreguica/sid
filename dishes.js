@@ -3,7 +3,8 @@
 let {
 	bot,
 	photoEmitter
-} = require('./bot')
+} = require('./bot'),
+	usersDAO = require('./db/usersDAO')
 
 module.exports.setup = function (ctx) {
 
@@ -20,8 +21,12 @@ module.exports.sendPhoto = function (ctx) {
 	photoEmitter.once(ctx.from.id, ctx => replyPhoto(ctx.message.photo[ctx.message.photo.length - 1].file_id))
 
 	function replyPhoto(photo) {
-		bot.telegram.sendPhoto(583734606, photo, {
-			caption: 'Shame! 🔔🔔🔔🔔🔔🔔🔔🔔'
+		usersDAO.getUsers().then(users => {
+			for (let user of users) {
+				bot.telegram.sendPhoto(user.id /* 583734606*/, photo, {
+					caption: 'Shame! 🔔🔔🔔🔔🔔🔔🔔🔔'
+				})
+			}
 		})
 	}
 }
