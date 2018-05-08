@@ -1,11 +1,8 @@
 'use strict'
 
-let Telegraf = require('telegraf'),
-	config = require('./config'),
+let bot = require('./bot'),
 	dishes = require('./dishes'),
 	db = require('./firebase-db')
-
-let bot = new Telegraf(config.botToken)
 
 bot.start(ctx => ctx.reply('Welcome'))
 bot.help(ctx => ctx.reply('Send me a sticker'))
@@ -23,6 +20,6 @@ bot.on('text', ctx => {
 })
 
 // Add your feature here
-bot.command('/dishes', ctx => dishes.setup(bot, ctx))
+bot.command('/dishes', ctx => dishes.setup(ctx))
 
 bot.startPolling()
