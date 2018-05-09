@@ -1,7 +1,7 @@
 'use strict'
 
 let bot = require('./bot').bot,
-	dishes = require('./dishes'),
+	dishes = require('./commands/dishes'),
 	authenticate = require('./middlewares/authenticate')
 
 bot.start(ctx => ctx.reply('Manda a senha!'))
