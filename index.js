@@ -2,6 +2,7 @@
 
 let bot = require('./bot').bot,
 	dishes = require('./commands/dishes'),
+	shop = require('./commands/shop'),
 	authenticate = require('./middlewares/authenticate')
 
 bot.start(ctx => ctx.reply('Manda a senha!'))
@@ -11,7 +12,7 @@ bot.use((ctx, next) => {
 		text = msg.text
 	authenticate(from, text).then(() => next()).catch(err => {
 		console.log(err)
-		ctx.reply('Qual seu problema mané?')
+		ctx.reply('Qual o seu problema mané?')
 	})
 })
 bot.help(ctx => ctx.reply('Send me a sticker'))
@@ -20,6 +21,6 @@ bot.hears('hi', ctx => ctx.reply('Hey there'))
 bot.hears(/buy/i, ctx => ctx.reply('Buy-buy'))
 
 // Add your feature here
-bot.command('/dishes', ctx => dishes.setup(ctx))
-
+dishes.setup()
+shop.setup()
 bot.startPolling()
