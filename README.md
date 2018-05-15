@@ -13,3 +13,5 @@
 https://telegraf.js.org/#/
 
 https://github.com/orgs/Repreguica/projects/1
+
+[![Build Status](https://travis-ci.org/Repreguica/sid.svg?branch=master)](https://travis-ci.org/Repreguica/sid)
